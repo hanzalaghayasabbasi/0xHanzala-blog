@@ -1,6 +1,8 @@
 # About
 
-I’m a cybersecurity enthusiast with a **Bachelor’s degree in Cybersecurity** and a **Practical Network Penetration Tester (PNPT)** certification from TCM Security. As the **captain of my CTF team**, I led us to secure **40th place globally** in the BlackHat MEA CTF—an event that set a Guinness World Record for the largest onsite CTF in the world.
+I’m a cybersecurity enthusiast with a **Bachelor’s degree in Cybersecurity** and a **Practical Network Penetration Tester (PNPT)** certification from TCM Security. My team secured **40th place globally** in the BlackHat MEA CTF—an event that set a Guinness World Record for the largest onsite CTF in the world.
+
+Beyond competitions, I actively practice on platforms such as Hack The Box, TryHackMe, and PortSwigger Web Security Academy, where I sharpen my skills in penetration testing, web exploitation, and Active Directory attacks.
 
 This blog is my platform to contribute to the infosec community by sharing detailed write-ups, practical tutorials, and insights from ethical hacking on authorized systems. I focus on creating beginner-friendly content to help others master cybersecurity concepts and techniques.
 
