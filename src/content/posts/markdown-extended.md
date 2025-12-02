@@ -1,20 +1,3 @@
-<script>
-  const correctPassword = "12345";   // ← CHANGE THIS to whatever you want
-
-  if (sessionStorage.getItem("access-granted") !== "true") {
-    const userInput = prompt("Enter password to view this page:");
-    if (userInput !== correctPassword) {
-      document.body.innerHTML = `
-        <div style="font-family:system-ui;text-align:center;margin-top:15vh;">
-          <h1>Wrong password</h1>
-          <p>This page is password-protected.</p>
-        </div>`;
-      throw new Error("Access denied");
-    }
-    sessionStorage.setItem("access-granted", "true");
-  }
-</script>
-
 ---
 title: Markdown Extended Features
 published: 2024-05-01
@@ -24,7 +7,26 @@ image: ''
 tags: [Demo, Example, Markdown, Fuwari]
 category: 'Examples'
 draft: true
+_password: "hanzala123"   # ← Change this to whatever password you want
 ---
+
+<script>
+  // Password protection – only runs on this single page
+  const correctPassword = "hanzala123";   // ← Must match the _password above (or just hardcode it)
+
+  if (sessionStorage.getItem("page-unlocked") !== "true") {
+    const input = prompt("Enter password to view this page:")?.trim();
+    if (input !== correctPassword) {
+      document.documentElement.innerHTML = `
+        <div style="font-family:system-ui;text-align:center;margin-top:20vh;">
+          <h1>Wrong password</h1>
+          <p>This page is private.</p>
+        </div>`;
+      throw new Error("Access denied");
+    }
+    sessionStorage.setItem("page-unlocked", "true");
+  }
+</script>
 
 ## GitHub Repository Cards
 You can add dynamic cards that link to GitHub repositories, on page load, the repository information is pulled from the GitHub API. 
