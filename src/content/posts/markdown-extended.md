@@ -1,4 +1,3 @@
-
 <script>
   const correctPassword = "12345";   // ← CHANGE THIS to whatever you want
 
