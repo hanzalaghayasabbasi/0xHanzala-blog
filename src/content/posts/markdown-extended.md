@@ -1,3 +1,21 @@
+
+<script>
+  const correctPassword = "12345";   // ← CHANGE THIS to whatever you want
+
+  if (sessionStorage.getItem("access-granted") !== "true") {
+    const userInput = prompt("Enter password to view this page:");
+    if (userInput !== correctPassword) {
+      document.body.innerHTML = `
+        <div style="font-family:system-ui;text-align:center;margin-top:15vh;">
+          <h1>Wrong password</h1>
+          <p>This page is password-protected.</p>
+        </div>`;
+      throw new Error("Access denied");
+    }
+    sessionStorage.setItem("access-granted", "true");
+  }
+</script>
+
 ---
 title: Markdown Extended Features
 published: 2024-05-01
