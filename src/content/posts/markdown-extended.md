@@ -6,25 +6,24 @@ description: 'Read more about Markdown features in Fuwari'
 image: ''
 tags: [Demo, Example, Markdown, Fuwari]
 category: 'Examples'
-draft: true
-_password: "hanzala123"   # ← Change this to whatever password you want
+draft: false   # ← VERY IMPORTANT: must be false
 ---
 
-<script>
-  // Password protection – only runs on this single page
-  const correctPassword = "hanzala123";   // ← Must match the _password above (or just hardcode it)
+<script is:inline>
+  const PASSWORD = "hanzala";   // ← change this to whatever you want
 
-  if (sessionStorage.getItem("page-unlocked") !== "true") {
-    const input = prompt("Enter password to view this page:")?.trim();
-    if (input !== correctPassword) {
+  // Only run the check once per session
+  if (!sessionStorage.getItem("markdown-extended-unlocked")) {
+    const input = prompt("Enter password to read this page:")?.trim();
+    if (input !== PASSWORD) {
       document.documentElement.innerHTML = `
-        <div style="font-family:system-ui;text-align:center;margin-top:20vh;">
+        <div style="font-family:system-ui;text-align:center;margin-top:20vh;color:#ef4444;">
           <h1>Wrong password</h1>
           <p>This page is private.</p>
         </div>`;
       throw new Error("Access denied");
     }
-    sessionStorage.setItem("page-unlocked", "true");
+    sessionStorage.setItem("markdown-extended-unlocked", "true");
   }
 </script>
 
