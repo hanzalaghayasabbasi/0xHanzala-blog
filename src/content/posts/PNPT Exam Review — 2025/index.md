@@ -5,7 +5,7 @@ description: 'An in-depth review of the Practical Network Penetration Tester (PN
 image: './cover.jpg'
 tags: [PNPT, Review ,Exam]
 category: 'Certification'
-draft: true
+draft: false
 ---
 # I Passed the PNPT Certification on My First Attempt
 
@@ -95,5 +95,6 @@ It’s not just about passing — it’s about developing the mindset of a real-
 
 
 ---
+
 
 
